@@ -28,8 +28,6 @@ services:
     environment:
       PORT: 1337
       HOST: 0.0.0.0
-      PUBLIC_URL: ${PUBLIC_URL_FOR_ADMIN}
-      SERVE_ADMIN_PANEL: true
       DATABASE_HOST: postgres
       DATABASE_PORT: 5432
       DATABASE_NAME: robotutor
