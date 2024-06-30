@@ -19,6 +19,7 @@ services:
     environment:
       PORT: 3000
       API_BASE_URL: ${API_BASE_URL}
+      API_BASE_ASSETS_URL: ${API_BASE_ASSETS_URL}
     networks:
       - robotutor-tech
 
