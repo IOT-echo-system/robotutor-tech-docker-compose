@@ -59,6 +59,21 @@ services:
     networks:
       - robotutor-tech
 
+  postgres-backup:
+    image: shiviraj/db-backup:arm64
+    container_name: postgres-backup
+    restart: unless-stopped
+    environment:
+      CRON: ${BACKUP_CRON}
+      GIT_REPOSITORY: ${GIT_REPOSITORY}
+      DB_URL: postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/robotutor
+      USER_EMAIL: ${USER_EMAIL}
+      USER_NAME: ${USER_NAME}
+    depends_on:
+      - postgres
+    networks:
+      - robotutor-tech
+
 networks:
   robotutor-tech:
     driver: bridge

@@ -1,4 +1,6 @@
 fileignoreconfig:
 - filename: default.conf
   checksum: b6ba0278e4ec1db250ce61cbef63a094ea242e3a306bd57f422932ee77232ac7
+- filename: docker-compose.yml
+  checksum: a8c5e8e0674c646860aba114a71b2cd9a990fc2998d31e90e80ea0bdad6732a0
 version: ""
